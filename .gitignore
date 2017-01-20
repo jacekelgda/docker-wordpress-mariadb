@@ -1,2 +1,4 @@
 !mysql/backup/.gitkeep
 mysql/backup
+!wp-content/.gitkeep
+wp-content
