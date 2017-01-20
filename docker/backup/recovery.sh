@@ -6,6 +6,7 @@ if [ -f "/tmp/mysql/backup/latest.sql" ]; then
         if [ "$options_table" = "wp_options" ]; then
                         echo "DB exists!"
                         echo "backing up latest sql"
+                        rm /tmp/mysql/backup/latest_*
                         mv /tmp/mysql/backup/latest.sql /tmp/mysql/backup/latest_$DATE.sql.BAK
                         mysqldump -uroot -pexample -hmysql wordpress > /tmp/mysql/backup/latest.sql
                 else
